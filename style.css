@@ -8,6 +8,7 @@
   margin: 0%;
   text-decoration: none;
   list-style: none;
+  overflow-x: hidden;
 }
 
 body{
@@ -49,7 +50,6 @@ span{
 
 h2{
   font-size: 56px;
-  line-height: 1.07143;
   font-weight: 600;
   letter-spacing: 0.005em;
   font-family: Helvetica Neue Regular;
@@ -58,16 +58,15 @@ h2{
 
 h3{
   font-size: 28px;
-  line-height: 1.10722;
   font-weight: 400;
   letter-spacing: 0.004em;
   font-family: Helvetica Neue Regular;
   color: #1d1d1f;
+  text-align: center;
 }
 
 .h3-dark{
   font-size: 28px;
-  line-height: 1.10722;
   font-weight: 400;
   letter-spacing: 0.004em;
   font-family: Helvetica Neue Regular;
@@ -81,6 +80,7 @@ h3{
   letter-spacing: .011em;
   font-family: Helvetica Neue Regular;
   color: #6e6e73;
+  text-align: center;
 }
 
 .product-link-dark{
@@ -118,6 +118,7 @@ h3{
   background: rgba(22, 22, 23, .8);
   height: 44px;
   width: 100%;
+  z-index: 1;
 }
 
 .container{
@@ -172,6 +173,61 @@ h3{
   display: none;
 }
 
+.first-brand-product{
+  position: relative;
+  width:100%;
+  height: 624px;
+}
+
+.relative-template{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.relative-template-rendered{
+  display: none;
+}
+
+.product-name{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 60%;
+  gap: 10px;
+}
+
+.product-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 72%;
+}
+
+.headline-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 80%;
+}
+
+.product-link-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 88%
+}
+
+/* responsive */
+
 @media (max-width:1024px) {
   .container{
     width: 100%;
@@ -179,6 +235,22 @@ h3{
 
   .navigation{
     width: 95%;
+  }
+
+  h2{
+    font-size: 48px;
+  }
+
+  h3{
+    font-size: 24px;
+  }
+
+  .p-headline-grey{
+    font-size: 19px;
+  }
+
+  .product-link{
+    font-size: 19px;
   }
 }
 
@@ -191,6 +263,29 @@ h3{
     display:inline-flex;
     align-items: center;
     gap: 18px;
+  }
+
+  .first-brand-product{
+    height: 617px;
+  }
+
+  .relative-template-rendered{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .relative-template{
+    display: none;
+  }
+
+  .h2{
+    font-size: 32px;
+  }
+
+  .product-link{
+    font-size: 17px;
   }
 
 }
