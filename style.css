@@ -41,10 +41,9 @@ span{
 
 .h2-dark{
   font-size: 56px;
-  line-height: 1.07143;
   font-weight: 600;
-  letter-spacing: -.005em;
   font-family: Helvetica Neue Regular;
+  text-align: center;
   color: #f5f5f7;
 }
 
@@ -71,6 +70,7 @@ h3{
   letter-spacing: 0.004em;
   font-family: Helvetica Neue Regular;
   color: #f5f5f7;
+  text-align: center;
 }
 
 .p-headline-grey{
@@ -177,6 +177,31 @@ h3{
   position: relative;
   width:100%;
   height: 624px;
+  overflow-y: hidden;
+}
+
+.second-brand-product{
+  position: relative;
+  width: 100%;
+  height: 624px;
+  margin-top: 10px;
+  overflow-y: hidden;
+}
+
+.left-product-box{
+  position: relative;
+  width: 100%;
+  height: 624px;
+  margin-top: 10px;
+  overflow-y: hidden;
+}
+
+.right-product-box{
+  position: relative;
+  width: 100%;
+  height: 624px;
+  margin-top: 10px;
+  overflow-y: hidden;
 }
 
 .relative-template{
@@ -199,6 +224,16 @@ h3{
   gap: 10px;
 }
 
+.second-product-name{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  top: 10%;
+}
+
 .product-description{
   display: flex;
   align-items: center;
@@ -206,6 +241,15 @@ h3{
   width: 100%;
   position: absolute;
   top: 72%;
+}
+
+.second-product-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 22%;
 }
 
 .headline-text{
@@ -224,6 +268,26 @@ h3{
   width: 100%;
   position: absolute;
   top: 88%
+}
+
+.second-product-link-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  gap: 30px;
+}
+
+.grid-secton{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 98%;
+  margin: 0% auto;
+  height: 624px;
+  overflow-y: hidden;
+  gap: 1%;
 }
 
 /* responsive */
@@ -288,4 +352,18 @@ h3{
     font-size: 17px;
   }
 
+}
+
+@media (max-width:735px) {
+  .grid-secton{
+    grid-template-columns: 1fr;
+    grid-template-rows: 624px 624px;
+    width: 100%;
+  }
+}
+
+@media (max-width:385px) {
+  .second-product-link-box{
+    top:32%;
+  }
 }
